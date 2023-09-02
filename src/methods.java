@@ -101,16 +101,18 @@ public class methods {
     Определить элементы одной из диагоналей можно по следующему принципу:
     индексы таких элементов равны, то есть [0][0], [1][1], [2][2], ..., [n][n].
      */
-    static void fillDiagonal(int size) {
+    static String fillDiagonal(int size) {
         int[][] arr = new int[size][size];
+        StringBuilder strArr = new StringBuilder();
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 if (i == j || j == size - 1 -i) {
                     arr[i][j] = 1;
                 }
             }
-            System.out.println(Arrays.toString(arr[i]));
+            strArr.append(Arrays.toString(arr[i]) + "\n");
         }
+        return strArr.toString();
     }
 
     /*

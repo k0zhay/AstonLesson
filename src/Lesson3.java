@@ -33,9 +33,8 @@ public class Lesson3 {
         System.out.printf(result + "8:\n%s\n\n",
                 methods.lessThanSix());
         // Задание №9:
-        System.out.println(result + "9:");
-        methods.fillDiagonal(5);
-        System.out.println();
+        System.out.printf(result + "9:\n%s\n",
+                methods.fillDiagonal(5));
         // Задание №10:
         System.out.printf(result + "10:\n%s",
                 methods.arrCreate(3, 999));
