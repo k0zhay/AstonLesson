@@ -1,4 +1,4 @@
-// Создать класс "Сотрудник" с полями: ФИО, должность, email, телефон, зарплата, возраст.
+
 public class Person {
     public String fullName;
     public String position;
@@ -17,8 +17,8 @@ public class Person {
         this.age = age;
     }
 
-    public void info(Person person) {
-        System.out.println("ФИО: " + fullName + "\nДолжность: " + position +
+    public void info() {
+        System.out.println("\nФИО: " + fullName + "\nДолжность: " + position +
                 "\nE-mail: " + email + "\nНомер телефона: " + phoneNumber +
                 "\nЗарплата: " + salary + "\nВозраст: " + age);
     }
