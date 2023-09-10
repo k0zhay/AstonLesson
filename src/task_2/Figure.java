@@ -12,7 +12,7 @@ public interface Figure {
     без переопределений.
      */
     default void calculationResult() {
-        System.out.println("\nПериметр фигуры: " + this.perimeter() +
-                "\nПлощадь фигуры: " + this.area());
+        System.out.printf("\nПериметр фигуры: %.2f" + "\nПлощадь фигуры: %.2f\n",
+                this.perimeter(), this.area());
     }
 }
