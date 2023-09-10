@@ -1,7 +1,7 @@
 package task_1;
 
 public class Plate {
-    int food;
+    public int food;
 
     public Plate(int food) {
         if (food > 0) {

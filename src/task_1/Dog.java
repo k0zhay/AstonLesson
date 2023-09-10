@@ -13,6 +13,7 @@ public class Dog extends Animal {
         dogCount++;
     }
 
+    // Бег собак
     public void run(int meters) {
         int maxRunDistance = 500; // Макс. расстояние бега для собаки
         if (meters <= maxRunDistance) {
@@ -24,6 +25,7 @@ public class Dog extends Animal {
         }
     }
 
+    // Плавание собак
     public void swim(int meters) {
         int maxSwimDistance = 10; // Макс. расстояние вплавь для собаки
         if (meters <= maxSwimDistance) {
@@ -35,10 +37,13 @@ public class Dog extends Animal {
         }
     }
 
+    // Подсчет количества собак
     public static int getDogCount() {
         return dogCount;
     }
 
+    // Вывод информации о собаке
+    @Override
     public void info(){
         System.out.println("\nКличка: " + name + "\nОкрас: " + color +
                 "\nПорода: " + dogBreed);

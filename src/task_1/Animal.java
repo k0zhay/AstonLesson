@@ -15,10 +15,12 @@ public class Animal {
         animalCount++;
     }
 
+    // Подсчет количества животных всех видов (Animal, Cat, Dog)
     public static int getAnimalCount() {
         return animalCount;
     }
 
+    // Вывод информации о животном
     public void info(){
         System.out.println("\nКличка: " + name + "\nОкрас: " + color);
     }

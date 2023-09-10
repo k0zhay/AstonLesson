@@ -13,6 +13,7 @@ public class Cat extends Animal {
         catCount++;
     }
 
+    // Бег кошей
     public void run(int meters) {
         int maxRunDistance = 200; // Макс. расстояние бега для кошки
         if (meters <= maxRunDistance) {
@@ -24,20 +25,25 @@ public class Cat extends Animal {
         }
     }
 
+    // Плавание (нет) кошек
     public void swim(int meters) {
         System.out.printf("\n%s не полезет в воду: котики не плавают!\n",
                 this.name);
     }
 
+    // Подсчет количества кошек
     public static int getCatCount() {
         return catCount;
     }
 
+    // Вывод информации о кошке
+    @Override
     public void info(){
         System.out.println("\nКличка: " + name + "\nОкрас: " + color +
                 "\nСытость: " + satiety);
     }
 
+    // Поедание корма из выбранной тарелки
     public void eatFrom(Plate plate) {
         int howMuchEat = 15;
         if (satiety) {
