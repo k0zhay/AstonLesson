@@ -2,10 +2,9 @@ package task_1;
 // 464116
 public class Cat extends Animal {
     private boolean satiety;
-    static int catCount;
+    static int catCount; // Количество кошек
 
-    public Cat() {
-    }
+    public Cat() {}
 
     public Cat(String name, String color) {
         super(name, color);
@@ -13,7 +12,7 @@ public class Cat extends Animal {
         catCount++;
     }
 
-    // Бег кошей
+    // Бег кошек
     public void run(int meters) {
         int maxRunDistance = 200; // Макс. расстояние бега для кошки
         if (meters <= maxRunDistance) {

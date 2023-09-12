@@ -4,8 +4,8 @@ public class Triangle implements Figure {
     double side1;
     double side2;
     double side3;
-    String backColor;
-    String bordColor;
+    public String backColor;
+    public String bordColor;
 
     public Triangle() {}
 
@@ -28,12 +28,5 @@ public class Triangle implements Figure {
     public double area() {
         double p = perimeter() / 2;
         return Math.sqrt(p*(p-side1)*(p-side2)*(p-side3));
-    }
-
-    @Override
-    public void info() {
-        System.out.printf("\nПериметр фигуры: %.2f" + "\nПлощадь фигуры: %.2f" +
-                        "\nЦвет фона: %s" + "\nЦвет границы: %s\n",
-                this.perimeter(), this.area(), this.backColor, this.bordColor);
     }
 }

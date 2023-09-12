@@ -2,10 +2,9 @@ package task_1;
 
 public class Dog extends Animal {
     String dogBreed;
-    static int dogCount;
+    static int dogCount; // Количество собак
 
-    public Dog() {
-    }
+    public Dog() {}
 
     public Dog(String name, String color, String dogBreed) {
         super(name, color);

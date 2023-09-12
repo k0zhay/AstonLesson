@@ -3,13 +3,11 @@ package task_1;
 public class Animal {
     String name;
     String color;
-    static int animalCount;
+    static int animalCount; // Общее количество животных
 
-    public Animal() {
-    }
+    public Animal() {}
 
     public Animal(String name, String color) {
-        this();
         this.name = name;
         this.color = color;
         animalCount++;

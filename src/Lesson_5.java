@@ -1,11 +1,11 @@
 
-import task_1.Animal;
-import task_1.Cat;
-import task_1.Dog;
-import task_1.Plate;
-import task_2.Circle;
-import task_2.Rectangle;
-import task_2.Triangle;
+/*
+Для сокращения записи использован импорт из каталогов с используемыми классами.
+Обычно так делать нежелательно, насколько я знаю, но в рамках данного задания
+решил, что такой вариант более читабельный.
+ */
+import task_1.*;
+import task_2.*;
 
 public class Lesson_5 {
     public static void main(String[] args) {
@@ -33,18 +33,20 @@ public class Lesson_5 {
         bobik.run(501);
         zorya.swim(9);
 
-        // Подсчет общего количества и видов по отдельности
+        // Подсчет общего количества животных и видов по отдельности
         System.out.println("\nВсего животных: " + Animal.getAnimalCount());
-        System.out.println("\nКоличество котиков: " + Cat.getCatCount());
-        System.out.println("\nКоличество собак: " + Dog.getDogCount());
+        System.out.println("Количество котиков: " + Cat.getCatCount());
+        System.out.println("Количество собак: " + Dog.getDogCount());
 
         // Задача с тарелками (Кто главный по тарелочкам?)
         Plate plate = new Plate(40);
-        murzik.eatFrom(plate);
-        markiza.eatFrom(plate);
-        markiza.eatFrom(plate);
-        murka.eatFrom(plate);
-        System.out.println("\nЕды в тарелке: " + plate.food);
+        murzik.eatFrom(plate); // кот был голодным
+        markiza.eatFrom(plate); // кот был голодным
+        markiza.eatFrom(plate); // уже кормили - не получит еду
+        murka.eatFrom(plate); // кот был голодным, но для него мало еды
+        // Информация о ранее вызванном объекте обновлена
+        murzik.info();
+        System.out.println("\nОсталось еды в тарелке: " + plate.food);
 
         /*
         Результат выполнения Задачи 2 (про фигуры)
@@ -55,14 +57,12 @@ public class Lesson_5 {
         Triangle triangle = new Triangle(3, 5, 6, "Белый", "Черный");
         Circle circle = new Circle(7, "Зеленый", "Фиолетовый");
 
-        // Проверяем работоспособность дефолтного метода из интерфейса
-        rectangle.calculationResult();
-        triangle.calculationResult();
-        circle.calculationResult();
-
-        // Выводим полную информацию о созданных фигурах
-        rectangle.info();
-        triangle.info();
-        circle.info();
+        /*
+        Проверяем работоспособность дефолтного метода из интерфейса
+        и выводим полную информацию о созданных фигурах
+         */
+        rectangle.info(rectangle.backColor, rectangle.bordColor);
+        triangle.info(triangle.backColor, triangle.bordColor);
+        circle.info(circle.backColor, circle.bordColor);
     }
 }
