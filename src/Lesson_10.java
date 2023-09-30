@@ -6,7 +6,7 @@ public class Lesson_10 {
         /*
         Создадим коробки с яблоками: в одну положим всего одно яблоко (одиночка),
         во вторую коллекцию из трех яблок
-         */
+        */
         Apple aloneApple = new Apple();
         Box<Apple> smallAppleBox = new Box<>(aloneApple); // первая коробка яблок
         Apple ap1 = new Apple();

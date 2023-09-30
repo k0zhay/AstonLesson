@@ -45,7 +45,7 @@ public class Box<T extends Fruit> {
     Сравнение веса коробок.
     "Первая коробка" - к которой используем метод.
     "Вторая коробка" - которую кладем в скобки.
-     */
+    */
     public boolean compare(Box<?> box) {
         if (this.boxWeight == box.getWeight()) {
             System.out.println("Весь коробок одинаков");
