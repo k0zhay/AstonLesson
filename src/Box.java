@@ -1,9 +1,7 @@
 import fruits.Fruit;
 import fruits.Apple;
 import fruits.Orange;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Box<T extends Fruit> {

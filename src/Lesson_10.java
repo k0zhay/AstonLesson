@@ -1,5 +1,4 @@
 import fruits.*;
-
 import java.util.ArrayList;
 
 public class Lesson_10 {
